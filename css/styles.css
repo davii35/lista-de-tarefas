@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #FFF;
+}
+
+
+body {
+    background-color: #17B486;
+    height: 100dvh;
+    display: grid;
+    place-content: center;
+
+}
+
+.container-conteudo {
+    height: 80dvh;
+    width: 60vw;
+    max-width: 600px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo-sessao {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    margin: 0 5px 10px;
+}
+
+.sessao_adicionar-tarefa {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #111;
+    border-radius: 10px;
+}
+
+.form_nova-tarefa {
+    display: flex;
+    gap: 10px;
+}
+
+.input_nome-da-tarefa {
+    padding: 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #000;
+}
+
+.botao-adicionar {
+    background-color: #2E5077;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1rem;
+
+    &:hover {
+        border: 1px solid #FFF;
+    }
+}
+
+.principal {
+    padding: 10px;
+    border: 2px solid #111;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.ul_lista-de-tarefas {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.li_tarefa {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        background-color: #ddd;
+        color: #000;
+    }
+}
+
+.tarefa-checkbox {
+    cursor: pointer;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.tarefa-nome {
+    cursor: pointer;
+    flex-grow: 1;
+    font-size: 1rem;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.botao-remover {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    color: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botao-remover_icone {
+    width: 20px;
+    height: 20px;
+    color: inherit;
+    position: absolute;
+}
+
+.botao-remover_icone:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: currentColor;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.botao-remover_icone:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: currentColor;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+
+.tarefa-concluida {
+    text-decoration: line-through;
+}
